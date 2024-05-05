@@ -105,8 +105,10 @@ main {
     background: white;
 }
 @font-face {
-    font-family: 'YourFontName';
+    font-family: 'olivera';
     src: url('../Olivera.otf') format('opentype'); /* Change the path and format according to your font files */
+    font-weight: normal;
+    font-style: normal;
 }
 
 .profile-photo {

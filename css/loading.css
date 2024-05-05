@@ -262,7 +262,12 @@ main {
     overflow: visible; /* Ensures nothing is hidden */
 
 }
-
+@font-face {
+    font-family: 'olivera';
+    src: url('../Olivera.otf') format('opentype'); /* Change the path and format according to your font files */
+    font-weight: normal;
+    font-style: normal;
+}
 .bow0 {
     position: absolute;
     top: 0; /* Position at the top of the wrapper */
