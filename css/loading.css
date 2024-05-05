@@ -1,0 +1,318 @@
+html, body {
+    margin: 5px;
+    padding: 0;
+    height: calc(100% - 10px); /* Subtract top and bottom margins */
+    width: calc(100% - 10px); /* Subtract left and right margins */
+    font-family: 'olivera', sans-serif;
+    background-color: #faf0e6;
+    color: #AA336A;
+    letter-spacing: 5px;
+    scroll-behavior: smooth;
+    box-sizing: border-box; /* Includes padding and border in the width/height */
+    overflow: hidden;
+}
+
+/* Media query for tablets and desktops */
+@media (min-width: 768px) {
+    html, body {
+        margin: 10px 10% 10%; /* Top margin 0, right/left margins 10%, bottom margin 10% */
+        width: 80%;
+        height: 80%;
+    }
+}
+
+
+footer{
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally in the center */
+    justify-content: center; /* Center the content vertically */
+    margin: 0 auto; /* Center the header if needed, but maintain full width */
+}
+.top-row {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning inside */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+
+h1 {
+    flex-grow: 1; /* Ensures the h1 can grow to use available space */
+    /*text-align: center; !* Ensures the text itself is centered within its space *!*/
+}
+
+h3 {
+    width:90%; /* Ensures the h3 spans the entire width of the header */
+    /*margin-left: 58%;*/
+    color: dimgrey;
+    /*margin-top: -4%;*/
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+h2{
+    font-size: 20px;
+
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between; /* Aligns children to the left and right */
+    /*align-items: center; !* Aligns children vertically in the center *!*/
+    width: 100%; /* Ensures the container spans the full width of its parent */
+    /*padding: 0 20px; !* Optional: adds some padding on both sides *!*/
+}
+
+. #nav-wrapper {
+    left: 0;
+    text-align: left;
+
+    /*display: flex;*/
+    /*align-items: center;*/
+}
+
+nav ul {
+    display: flex; /* Ensures the navigation items are laid out horizontally */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    list-style-type: none; /* Removes default list styling */
+}
+
+nav ul li {
+    margin-right: 10px; /* Adds space between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #AA336A; /* Pink text color, adjust as needed */
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+}
+@font-face {
+    font-family: 'YourFontName';
+    src: url('IdeaProjects/website-test/Olivera.otf') format('opentype'); /* Change the path and format according to your font files */
+}
+
+.loading-page {
+    background-color: #faf0e6; /* Beige background */
+    color: #AA336A; /* Pink text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*position: fixed;*/
+    z-index: 1000;
+    top:0;
+    left: 0;
+
+    /*display: none;*/
+}
+
+.centered-content {
+    text-align: center;
+    align-items: center; /* Centers children horizontally */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Optional: centers children vertically if needed */
+    display: flex;
+}
+
+.centered-content button {
+    letter-spacing: 1px;
+    opacity: 0;
+    padding: 2px 15px;
+    font-family: 'olivera', sans-serif;
+    font-size: 15px;
+    color: #AA336A; /* Text color */
+    background-color: #faf0e6; /* Initial background color */
+    background-image: linear-gradient(to right, #e7dfd8 50%, #faf0e6 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border: solid 1px #e4d5b7;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: opacity 1s ease;
+    animation: fadeInAndFill 8s ease forwards;
+}
+.centered-content button span {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+@keyframes fadeInAndFill {
+    0%, 20% {
+        opacity: 0;
+        background-position: 100% center;
+    }
+    20% { // Opacity reaches 1 at 20% of the animation time
+    opacity: 1;
+        background-position: 100% center;
+    }
+    100% {
+        opacity: 1;
+        background-position: 0% center;
+    }
+}
+.progress-bar {
+    width: 50%;
+    height: 10px;
+    background-color: #faf0e6;
+    border: solid 1px #e4d5b7;
+    /*border-radius: 50px;*/
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: opacity 1s ease;
+}
+
+.progress-bar-fill {
+    background-color: #e4d5b7;
+    width: 0%;
+    height: 100%;
+    /*border-radius: 50px;*/
+    transition: width 8s ease-in-out;
+
+}
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+.animated-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 2s ease forwards;
+    animation-delay: 2s; /* Adjust the delay as needed */
+    /*margin: -4px;*/
+}
+.animated-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Initial rotation and position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Final rotation and position */
+    }
+}
+
+.animated-walk {
+    opacity: 0;
+    transform: translateX(-100px); /* Initial position off-screen */
+    animation: slideInWalk 2s ease forwards;
+    animation-delay: 1s; /* Delay the animation by 1.5 seconds */
+}
+
+@keyframes slideInWalk {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Initial position off-screen */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Final position */
+    }
+}
+
+#canvas {
+    display: block; /* This removes any default margin */
+    width: 250px; /* Match the width of the canvas */
+    height: 300px; /* Match the height of the canvas */
+    background-color: white;
+    clip-path: polygon(
+            0% 6%, 5% 3%, 10% 6%, 15% 3%, 20% 6%, 25% 3%, 30% 6%, 35% 3%, 40% 6%, 45% 3%, 50% 6%,
+            55% 3%, 60% 6%, 65% 3%, 70% 6%, 75% 3%, 80% 6%, 85% 3%, 90% 6%, 95% 3%, 100% 6%,
+            100% 94%, 95% 97%, 90% 94%, 85% 97%, 80% 94%, 75% 97%, 70% 94%, 65% 97%, 60% 94%,
+            55% 97%, 50% 94%, 45% 97%, 40% 94%, 35% 97%, 30% 94%, 25% 97%, 20% 94%, 15% 97%,
+            10% 94%, 5% 97%, 0% 94%);
+    overflow: visible; /* Ensures nothing is hidden */
+
+}
+
+.bow0 {
+    position: absolute;
+    top: 0; /* Position at the top of the wrapper */
+    right: -25px; /* Position at the right of the wrapper */
+    width: 50px; /* Optional: set a specific size for the bow */
+    height: auto; /* Maintain aspect ratio */
+    transform: rotate(20deg); /* Tilt the bow by -10 degrees */
+}
+.bow1 {
+    position: absolute;
+    bottom: 0; /* Position at the top of the wrapper */
+    left: -20px; /* Position at the right of the wrapper */
+    width: 50px; /* Optional: set a specific size for the bow */
+    height: auto; /* Maintain aspect ratio */
+    transform: rotate(20deg); /* Tilt the bow by -10 degrees */
+}
+.canvas-wrapper {
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeIn 2s ease-out 1s forwards; /* Add 'forwards' to keep final state */
+    position: relative; /* This makes the positioning of the bows absolute relative to this container */
+    width: 250px; /* Match the width of the canvas */
+    height: 300px; /* Match the height of the canvas */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wavy {
+    animation-name: wavy;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+@keyframes wavy {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+

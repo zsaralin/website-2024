@@ -1,0 +1,311 @@
+html, body {
+    margin: 5px;
+    padding: 0;
+    height: calc(100% - 10px); /* Subtract top and bottom margins */
+    width: calc(100% - 10px); /* Subtract left and right margins */
+    font-family: 'olivera', sans-serif;
+    background-color: #faf0e6;
+    color: #AA336A;
+    letter-spacing: 5px;
+    scroll-behavior: smooth;
+    box-sizing: border-box; /* Includes padding and border in the width/height */
+}
+
+/* Media query for tablets and desktops */
+@media (min-width: 768px) {
+    html, body {
+        margin: 10px 10% 10%; /* Top margin 0, right/left margins 10%, bottom margin 10% */
+        width: 80%;
+        height: 80%;
+    }
+}
+
+footer{
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally in the center */
+    justify-content: center; /* Center the content vertically */
+    margin: 0 auto; /* Center the header if needed, but maintain full width */
+}
+.top-row {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning inside */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+
+h1 {
+    flex-grow: 1; /* Ensures the h1 can grow to use available space */
+    /*text-align: center; !* Ensures the text itself is centered within its space *!*/
+}
+
+h3 {
+    width:90%; /* Ensures the h3 spans the entire width of the header */
+    /*margin-left: 58%;*/
+    color: dimgrey;
+    /*margin-top: -4%;*/
+        font-size: 17px;
+        letter-spacing: 1px;
+        text-align: left;
+}
+h2{
+    font-size: 20px;
+
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between; /* Aligns children to the left and right */
+    /*align-items: center; !* Aligns children vertically in the center *!*/
+    width: 100%; /* Ensures the container spans the full width of its parent */
+    /*padding: 0 20px; !* Optional: adds some padding on both sides *!*/
+}
+
+. #nav-wrapper {
+    left: 0;
+    text-align: left;
+
+    /*display: flex;*/
+    /*align-items: center;*/
+}
+
+nav ul {
+    display: flex; /* Ensures the navigation items are laid out horizontally */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    list-style-type: none; /* Removes default list styling */
+}
+
+nav ul li {
+    margin-right: 10px; /* Adds space between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #AA336A; /* Pink text color, adjust as needed */
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+}
+@font-face {
+    font-family: 'YourFontName';
+    src: url('../Olivera.otf') format('opentype'); /* Change the path and format according to your font files */
+}
+
+.profile-photo {
+    width: 30%;  /* Set the width (and height indirectly) of the photo */
+    border-radius: 50%;  /* This makes the image round */
+    object-fit: cover;  /* Ensures the image covers the area, useful if not a perfect square */
+    margin-right: 20px;
+}
+
+.contact-bar {
+    right: 0;
+    /*position: absolute;*/
+    font-size: 15px;
+    text-align: right;
+}
+
+.social-links {
+    /*position: absolute;*/
+    margin: 10px 15px 5px 5px;
+    right: 0;
+}
+.contact-bar a {
+    text-decoration: none;  /* Remove underline from links */
+}
+
+.contact-bar a:hover {
+}
+
+a[href^="mailto:"] {
+    color: #AA336A; /* Change to any color you like, here it's a pink shade */
+    text-decoration: none; /* Optional: removes underline */
+}
+.contact-bar a[href*="linkedin"], .contact-bar a[href*="github"] {
+    color: #AA336A; /* Change to any color you like, here it's a pink shade */
+}
+
+#main-page{
+    width: 100%;
+    overflow-x: hidden;
+}
+#main-page, section {
+    width: 100%; /* Ensures that the main page container and each section take full width */
+    overflow-x: hidden; /* Prevents horizontal scroll caused by overflowing content */
+    letter-spacing: 3px;
+
+}
+p,section{
+    font-weight: 500;
+
+}
+p{
+    color: dimgray;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+section {
+    padding: 40px; /* Ensure padding isn't too large */
+    box-sizing: border-box;
+    border-bottom: 2px solid #ccc; /* Add a subtle separator */
+
+}
+
+section:last-child {
+    border-bottom: none; /* Remove bottom border for the last section */
+}
+
+
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates exactly 4 columns */
+    gap: 10px; /* Adjust the gap as needed */
+    width: 100%; /* Adjust width as needed, could be 100% or a fixed width */
+    margin: 0 auto; /* Centers the grid horizontally */
+}
+
+.collage-item {
+    position: relative;
+    loading: lazy; /* Lazy loads images */
+    overflow: hidden; /* This will hide any part of the img that overflows the container */
+    width: 100%;
+    padding-top: 100%; /* This creates a square by making the height equal to the width */
+
+
+}
+
+.collage-item:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+.collage-item img {
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 120%;  /* Increase width to 120% of its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    transform: translate(-50%, -50%); /* Shift the image back to center after resizing */
+}
+.collage-item img:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Combines centering and scaling */
+}
+.artist-link {
+
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none; /* Removes the underline */
+    text-decoration: underline; /* Adds underline to indicate it's a clickable link */
+
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    height: 80%;
+    max-width: 700px;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+}
+
+.project {
+    margin-bottom: 20px; /* Add some space between project sections */
+    border: 2px solid #AA336A; /* Add a border */
+    padding: 10px 20px 15px 20px; /* Add some padding inside the sections */
+    border-radius: 10px; /* Round the corners of the sections */
+    display: flex;
+    flex-direction: column;
+}
+
+.project h3 {
+    font-size: 18px; /* Adjust the font size of the project names */
+    letter-spacing: 2px;
+    margin-bottom: 10px; /* Add some space below project names */
+}
+
+.project p {
+    font-size: 16px; /* Adjust the font size of the project descriptions */
+    color: dimgray; /* Change the color of the project descriptions */
+    margin-bottom: 5px; /* Add or reduce margin as needed */
+
+}
+
+.project button {
+    background-color: #AA336A;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.project button:hover {
+    background-color: #922356;
+}
+
+
+.button-container {
+     display: flex;
+     margin-top: 5px;
+    flex-wrap: wrap;  /* Allow items to wrap onto the next line */
+
+}
+
+.github-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 5px; /* Adjust the gap between GitHub button and languages */
+    margin: 15px  10px  5px  5px;
+    cursor: pointer;
+}
+
+.languages span {
+    margin-right: 10px; /* Adjust the spacing between percentage indicators */
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
