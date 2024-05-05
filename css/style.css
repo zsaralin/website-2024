@@ -6,8 +6,9 @@ html, body {
     font-family: 'olivera', sans-serif;
     background-color: #faf0e6;
     color: #AA336A;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     scroll-behavior: smooth;
+    font-weight: bold;
     box-sizing: border-box; /* Includes padding and border in the width/height */
 }
 
@@ -42,6 +43,7 @@ header {
     align-items: center;
     position: relative; /* Needed for absolute positioning inside */
     justify-content: center; /* Centers the content horizontally */
+
 }
 
 
@@ -53,14 +55,15 @@ h1 {
 h3 {
     width:90%; /* Ensures the h3 spans the entire width of the header */
     /*margin-left: 58%;*/
-    color: dimgrey;
+    color: #3b3b3b;
     /*margin-top: -4%;*/
         font-size: 17px;
         letter-spacing: 1px;
         text-align: left;
+
 }
 h2{
-    font-size: 20px;
+    font-size: 25px;
 
 }
 
@@ -155,9 +158,10 @@ p,section{
 
 }
 p{
-    color: dimgray;
+    color: #3b3b3b;
     letter-spacing: 2px;
     font-size: 17px;
+    font-weight: bold;
 }
 section {
     padding: 40px; /* Ensure padding isn't too large */
@@ -258,13 +262,15 @@ section:last-child {
     font-size: 18px; /* Adjust the font size of the project names */
     letter-spacing: 2px;
     margin-bottom: 10px; /* Add some space below project names */
+    font-weight: bolder;
 }
 
 .project p {
-    font-size: 16px; /* Adjust the font size of the project descriptions */
-    color: dimgray; /* Change the color of the project descriptions */
+    font-size: 15px; /* Adjust the font size of the project descriptions */
     margin-bottom: 5px; /* Add or reduce margin as needed */
-
+    /*font-width: 900;*/
+    font-family: montserrat;
+    font-weight: normal;
 }
 
 .project button {

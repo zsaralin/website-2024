@@ -5,197 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.ico" />
     <title>Saralin Zassman</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
 </head>
 <body>
-<div id="main-page">
-    <div class="header-row"> <!-- New wrapper div -->
-        <div id="nav-wrapper">
-            <nav>
-                <ul>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#art">art</a></li>
-                    <li><a href="resume.pdf" target="_blank">resume</a></li>
-                </ul>
-            </nav>
+<div id="loading-page" class="loading-page" style="display: flex">
+    <div class="centered-content">
+        <h1 class="animated-text">
+            <span>welcome!</span>
+        </h1>
+        <h2 class="animated-walk" id="wavy" style="letter-spacing: 3px">draw something!</h2>
+        <div id="progressText" class="hidden">Let's Go!</div>
+        <div class="canvas-wrapper">
+            <canvas id="canvas" width="250" height="300"></canvas>
+            <img src="bow0.png" alt="Bow" class="bow0">
+            <img src="bow1.png" alt="Bow" class="bow1">
         </div>
-        <div class="contact-bar">
-            <span>let's connect!</span>
-            <div style="padding-top: 5px">
-                <a href="mailto:zsaralin@gmail.com">zsaralin@gmail.com</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/zsaralin/">
-                    <img src="linkedin.svg" alt="LinkedIn" style="width: 15px; height: 15px;">
-                </a>
-                <a href="https://github.com/zsaralin">
-                    <img src="github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
-                </a>
-            </div>
-        </div>
+        <button id="letsgo" class="centered-content button">
+            <span>let's go!</span>
+        </button>
+        <footer>
+            <p style="letter-spacing: 2px">made by saralin ✮⋆˙</p>
+        </footer>
     </div>
-    <header>
-        <div class="top-row">
-            <img src="me.jpeg" alt="Saralin Zassman" class="profile-photo">
-            <h1>Saralin Zassman</h1>
-        </div>
-    </header>
-    <section id="about-me" style = "padding-top: 20px">
-        <h2>Hi, I'm Saralin! *:･ﾟ✧</h2>
-        <p>
-            I'm a software developer with a passion for all things computer science and visual art! Currently,
-            I work as a creative technologist at Antimodular Research, the Montreal-based studio of media artist
-            <a href="https://www.lozano-hemmer.com/" target="_blank" rel="noopener noreferrer" class="artist-link">Rafael Lozano-Hemmer</a>.
-            My role involves both the creation of new interactive artworks and the preservation of existing ones.
-        </p>
-    </section>
-                <section id="projects">
-                    <h2>Projects</h2>
-                    <div class="project">
-                        <h3>Mindful Scroll (2023)</h3>
-                        <img src="mindfulscroll.png" alt="Mindful Scroll" style="width: auto; max-width: 100%; height: auto;">
-
-                        <p>A mobile application for mindfulness that encourages a slow and deliberate approach to colouring.</p>
-                        <p>Master's thesis, accepted at ACM CHI 2024. </p>
-                        <p>Note: In the field of Human-Computer Interaction (HCI), conference proceedings are the preferred avenue for publication.
-                            CHI (ACM Conference on Human Factors in Computing Systems), is regarded as the top conference in HCI, ranking #1 on Google Scholar, with an average
-                            acceptance rate of 23%. </p>
-                        <div class="button-container">
-                            <button onclick="window.open('mindful-scroll.pdf', '_blank');">Conference Paper</button>
-                            <button onclick="window.open('https://uwspace.uwaterloo.ca/handle/10012/19935?show=full', '_blank');">Thesis</button>
-                            <button onclick="window.open('https://infinite-scroll-8kuf.onrender.com/', '_blank');">Mobile App</button>
-                        </div>
-                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/mindful-scroll')">
-                            <div class="languages">
-                                <span>JavaScript 97.9%, CSS 1.4%, HTML: 0.6%</span>
-                            </div>
-                            <img src="github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
-                        </div>
-                        </div>
-                    <div class="project">
-                        <h3>Speech to Text (2023)</h3>
-                        <p>Full-stack react app that converts speech to text using the Web Speech API, and then uses the text to
-                            generate a rhyme, poem, haiku and song using Open AI API.</p>
-                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/speech-to-text')">
-                            <div class="languages">
-                                <span>JavaScript 83.6%, CSS 10.9%, HTML: 5.5%</span>
-                            </div>
-                            <img src="github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h3>Simple, rule-based chatbot (2021)</h3>
-                        <p>Uses Google's DialogFlow for response generation.</p>
-                        <p>Created for a course project (CS 886 - Advanced Topics in Artificial Intelligence), to study the impact of user interface design on the human-chatbot interaction.</p>
-                        <div class="button-container">
-                            <button onclick="window.open('886.pdf', '_blank');">Course Paper</button>
-                        </div>
-                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/dialogflow-chatbot')">
-                            <div class="languages">
-                                <span>JavaScript 61.1%, CSS 26.1%, HTML 12.7%</span>
-                            </div>
-                            <img src="github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h3>DOM Data (2020)</h3>
-                        <p>Uses the Document Object Model of 100 webpages to generates structural priors to improve the vision-based segmentation of web pages. </p>
-                        <p>Completed during my research internship with Dr. Michael Cormier at Mount Allison University.</p>
-                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/DOM-tree-data')">
-                            <div class="languages">
-                                <span>Python 100%</span>
-                            </div>
-                            <img src="github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h3>Haiku Generator (2020)</h3>
-                        <img src="haiku.gif" alt="Mindful Scroll" style="width: auto; max-width: 100%; height: auto;">
-
-                        <p>Uses Markov chains to generate a large number of sentences from a collection of pre-existing poems.
-                            The resulting text undergoes rigorous testing to identify
-                            the optimal sequence of words that will be used in the final haiku.  </p>
-                        <p>Completed for a course project on computational creativity at the University of Kent.</p>
-                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/haiku-generator')">
-                            <div class="languages">
-                                <span>Java 100%</span>
-                            </div>
-                            <img src="github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
-                        </div>
-                    </div>
-                </section>
-                <section id="art">
-                    <h2>Art</h2>
-                    <div class="image-collage">
-                        <div class="collage-item">
-                            <img src="collage/blue.jpg"
-                                 loading="lazy"
-                                 style="width: 210%; transform: translate(-45%, -50%);"
-                                 alt="Blue"
-                                 onmouseover="this.style.transform='translate(-45%, -50%) scale(1.1)';"
-                                 onmouseout="this.style.transform='translate(-45%, -50%)';"
-                                 onclick="openModal('collage/blue.jpg', 'Blue')">
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/duck1.jpg"
-                                 style="width: 150%"
-                                 alt="Duck"
-                                 onclick="openModal('collage/duck1.jpg', 'Duck')">
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/unfinished.jpg"
-                                 style="width: 100%"
-                                 alt="Unfinished Art"
-                                 onclick="openModal('collage/unfinished.jpg', 'Duck')">
-                            >
-
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/koala.jpg"
-                                 style="width: 130%"
-                                 alt="Koala"
-                                 onclick="openModal('collage/koala.jpg', 'Duck')">
-                            >
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/seashell.jpg"
-                                 style="width: 180%"
-                                 alt="Seashell"
-                                 onclick="openModal('collage/seashell.jpg', 'Duck')">
-                            >
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/self.jpg"
-                                 style="width: 120%"
-                                 alt="Self Portrait"
-                                 onclick="openModal('collage/self.jpg', 'Duck')">
-                            >
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/stuffedanimal.jpg"
-                                 style="width: 190%"
-                                 alt="Stuffed Animal"
-                                 onclick="openModal('collage/stuffedanimal.jpg', 'Duck')">
-                            >
-                        </div>
-                        <div class="collage-item">
-                            <img src="collage/turkey.jpg"
-                                 style="width: 170%"
-                                 alt="Turkey"
-                                 onclick="openModal('collage/turkey.jpg', 'Duck')">
-                            >
-                        </div>
-                    </div>
-                    <div id="myModal" class="modal" onclick="closeModal(event)">
-                        <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
-                    </div>
-                </section>
-                <footer>
-
-                    <p style="letter-spacing: 2px">made by saralin ✮⋆˙</p>
-                </footer>
-    <script src="js/index.js"></script>
-
 </div>
-            </body>
-            </html>
+    <script src="js/loading.js"></script>
+</div>
+</body>
+</html>

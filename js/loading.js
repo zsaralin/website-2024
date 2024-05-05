@@ -50,7 +50,7 @@ window.onload = function() {
         setTimeout(() => {
             loadingPage.style.display = 'none';
         }, 500); // Corresponds to the transition time
-        window.location.href = "index.html";
+        window.location.href = "main.html";
 
     }
 
