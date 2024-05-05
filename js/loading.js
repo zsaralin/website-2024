@@ -1,5 +1,8 @@
-
-
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.location.reload();        console.log('Page loaded from bfcache');
+    }
+});
 window.onload = function() {
 
     const button = document.querySelector('.centered-content button');

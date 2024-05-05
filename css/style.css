@@ -71,7 +71,7 @@ h2{
     display: flex;
     justify-content: space-between; /* Aligns children to the left and right */
     /*align-items: center; !* Aligns children vertically in the center *!*/
-    width: 100%; /* Ensures the container spans the full width of its parent */
+    width: 90%; /* Ensures the container spans the full width of its parent */
     /*padding: 0 20px; !* Optional: adds some padding on both sides *!*/
 }
 
