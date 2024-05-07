@@ -141,7 +141,6 @@ main {
     font-size: 15px;
     color: #AA336A; /* Text color */
     background-color: #faf0e6; /* Initial background color */
-    background-image: linear-gradient(to right, #e7dfd8 50%, #faf0e6 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     border: solid 1px #e4d5b7;
@@ -159,15 +158,12 @@ main {
 @keyframes fadeInAndFill {
     0%, 20% {
         opacity: 0;
-        background-position: 100% center;
     }
     20% { // Opacity reaches 1 at 20% of the animation time
     opacity: 1;
-        background-position: 100% center;
     }
     100% {
         opacity: 1;
-        background-position: 0% center;
     }
 }
 .progress-bar {
