@@ -4,7 +4,7 @@
 
 body{
     /* !!! Change the background-image property! */
-    background-image: url('http://saralin.ca/media/header-ms.png'), linear-gradient(to bottom,#444444, #000000);
+    background-image: linear-gradient(to bottom,#444444, #000000);
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@ body{
     color: white;
     font-family: 'Open Sans';
     font-weight: lighter;
-    margin-top:40%;
+    margin-top:5%;
     padding: 20px;
 }
 
