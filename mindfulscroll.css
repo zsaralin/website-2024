@@ -29,7 +29,7 @@ body{
 }
 
 #header img {
-    width:30%;
+    /*width:30%;*/
     max-width: 200px;
 }
 
@@ -57,7 +57,8 @@ body{
 }
 
 #teaser img {
-    max-width: 500px;
+    /*max-width: 500px;*/
+    width: 120%;
     display: block;
     margin: auto;
 }
@@ -149,4 +150,10 @@ code {
 
 h3 {
     font-size: 1.1em !important;
+}
+.author-icon {
+
+    height: 130px; /* Adjust the width as needed */
+    width: auto;
+    padding: 15px;
 }
