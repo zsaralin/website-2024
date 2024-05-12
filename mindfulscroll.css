@@ -15,6 +15,9 @@ body{
     font-family: 'Open Sans';
     font-weight: lighter;
     margin-top:5%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
 }
 
@@ -31,11 +34,13 @@ body{
 #header img {
     /*width:30%;*/
     max-width: 200px;
+
 }
 
 #hero-img {
     width:100%;
 }
+
 
 .pad-right {
     padding-right: 20px;
@@ -45,6 +50,9 @@ body{
     background-color: white;
     margin-top: 20px;
     font-family: 'Open Sans';
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px;
     margin-bottom: 30px;
 }
@@ -151,9 +159,16 @@ code {
 h3 {
     font-size: 1.1em !important;
 }
+author-wrap {
+    white-space: nowrap; /* Prevent wrapping of content */
+    overflow: hidden; /* Prevent overflow of content */
+}
 .author-icon {
-
-    height: 130px; /* Adjust the width as needed */
-    width: auto;
-    padding: 15px;
+    display: inline-block; /* Align images inline */
+    height: 100px; /* Set a fixed height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between icons */
+}
+.author-icon:last-child {
+    margin-right: 0; /* Remove margin for the last icon */
 }
