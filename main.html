@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="#projects">projects</a></li>
-                    <li><a href="#art">art</a></li>
+                    <li><a href="#press">press</a></li>
                     <li><a  href="javascript:void(0)" onclick="window.open('Resume.pdf', '_blank')";>resume</a></li>
                 </ul>
             </nav>
@@ -43,14 +43,107 @@
     <section id="about-me" style = "padding-top: 20px">
         <h2>Hi, I'm Saralin! *:ﾟ✧</h2>
         <p>
-            I'm a software developer with a passion for all things computer science and visual art! Currently,
-            I work as a creative technologist at Antimodular Research, the Montreal-based studio of media artist
-            <a href="https://www.lozano-hemmer.com/" target="_blank" rel="noopener noreferrer" class="artist-link">Rafael Lozano-Hemmer</a>.
-            My role involves both the creation of new interactive artworks and the preservation of existing ones.
+            I'm a software developer with a passion for all things computer science and creativity! Most recently, I worked
+            a creative technologist for internationally renowned media artist
+            <a href="https://www.lozano-hemmer.com/" target="_blank" rel="noopener noreferrer" class="artist-link">Rafael Lozano-Hemmer</a>, 
+            where I led the development of several full-stack applications for interactive artworks. <br><br>
+            I'm currently open to new opportunities, with my experience making me particularly well qualified for roles such as full-stack developer, creative technologist, or research engineer.
         </p>
     </section>
                 <section id="projects">
                     <h2>Projects</h2>
+                    <div class="project">
+                        <h3>Binocular Tension (2025)</h3>
+                        <p>A full-stack Python application that selects and displays one image at a time from a set 
+                            of eyes looking at different angles, based on the tracked person’s position relative to the display. The backend uses a RealSense camera mounted 3 meters above the display, angled downward, along with the Pyrealsense library to render a 3D scene that accounts for this setup and accurately tracks the closest viewer,
+                             creating the illusion that the eyes are following them.</p>
+                            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px">
+                            <video width="480" controls>
+                                <source src="media/binocular-me.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <video width="480" controls>
+                                <source src="media/binocular.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                            <small style="margin-top: 5px; color: #666; display: block;">Video © Rafael Lozano-Hemmer</small>
+                            <p>Developed for media artist Rafael-Lozano Hemmer. </p>
+
+                             <div class="button-container">
+                            <button onclick="window.open('https://www.lozano-hemmer.com/binocular_tension.php', '_blank');">Artwork</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/binocularTension')">
+                            <div class="languages">
+                                <span>Python 100%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Global Level of Confidence (2025)</h3>
+                        <p>A full-stack web app with a Vite React frontend that performs real-time face detection and landmark drawing using MediaPipe, and a Node.js backend that generates facial descriptors to find the closest matches from an archive of nearly 10,000 disappeared individuals during the Argentine dictatorship. The backend also uses a PostgreSQL database to store and update similarity scores over time, improving the accuracy of future searches. 
+                            Visitors can explore their top matches and learn more about each person, helping raise awareness of this important historical period.</p>
+                        <p>Developed for media artist Rafael-Lozano Hemmer.</p>
+
+                            <div class="button-container">
+                            <button onclick="window.open('https://levelofconfidence.net/', '_blank');">Website</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/gloc-parent2')">
+                            <div class="languages">
+                                <span>HTML 87.3%, JavaScript 12.3%, Other: 0.4%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Recognition (2024)</h3>
+                        <p>A revamp of an existing artwork (2018) using modern, state-of-the-art technologies.
+                            Originally developed in openFrameworks, I ported the piece to a new stack with a Python frontend and a Node.js backend.
+                            While the concept appears simple, the piece posed significant technical challenges. It displays hundreds of videos simultaneously, performs facial comparisons, and continuously records and saves new footage to a growing database, all without introducing lag to the live camera feed or video grid, and running entirely on a single M2 Pro.
+                        </p>
+                        <video width="240" controls>
+                                <source src="media/recognition.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <p>Developed for media artist Rafael-Lozano Hemmer. 
+                        <div class="button-container">
+                            <button onclick="window.open('https://www.lozano-hemmer.com/recognition.php', '_blank');">Artwork</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/recognition-parent')">
+                            <div class="languages">
+                                <span>Python 70.6%, JavaScript 28.6%, Shell: 0.8%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Transparency Display (2024)</h3>
+                        <p>Electron app that uses MoveNet to detect body landmarks and developed a custom segmentation pipeline to allow greater control over visual parameters such as limb thickness and length, compared to off-the-shelf solutions. 
+                            The segmentations from each camera feed are composited, and pixel values are extracted and sent via DMX to drive the physical electronics.</p>
+                        <div style= "margin-top: 10px">
+                            <video width="480" controls>
+                                <source src="media/pdlc.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <small style="margin-top: 5px; color: #666; display: block;">Video © Rafael Lozano-Hemmer</small>
+                        </div>
+                        <p>Developed for media artist Rafael-Lozano Hemmer. 
+
+                            <div class="button-container">
+                            <button onclick="window.open('https://www.lozano-hemmer.com/transparency_display.php', '_blank');">Artwork</button>
+                        </div>
+                            <div class="github-container" onclick="window.open('https://github.com/zsaralin/PDLC')">
+                            <div class="languages">
+                                <span>JavaScript 93.1%, CSS 4.4%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
                     <div class="project">
                         <h3>Mindful Scroll (2023)</h3>
                         <img src="media/mindfulscroll.png" alt="Mindful Scroll" style="width: auto; max-width: 100%; height: auto;">
@@ -62,7 +155,7 @@
                         <div class="button-container">
                             <button onclick="window.open('mindful-scroll.pdf', '_blank');">Conference Paper</button>
                             <button onclick="window.open('https://uwspace.uwaterloo.ca/handle/10012/19935?show=full', '_blank');">Thesis</button>
-                            <button onclick="window.open('https://infinite-scroll-8kuf.onrender.com/', '_blank');">Mobile App</button>
+                            <button onclick="window.open('https://https://mindfulscroll.ca/', '_blank');">Mobile App</button>
                         </div>
                         <div class="github-container" onclick="window.open('https://github.com/zsaralin/mindful-scroll')">
                             <div class="languages">
@@ -72,7 +165,7 @@
                             <span style="color: black">Repo</span>
                         </div>
                         </div>
-                    <div class="project">
+                    <div class="project" style = "display: none">
                         <h3>Speech to Text (2023)</h3>
                         <p>Full-stack react app that converts speech to text using the Web Speech API, and then uses the text to
                             generate a rhyme, poem, haiku and song using the OpenAI API.</p>
@@ -84,7 +177,7 @@
                             <span style="color: black">Repo</span>
                         </div>
                     </div>
-                    <div class="project">
+                    <div class="project"  style = "display: none">
                         <h3>Simple, rule-based chatbot (2021)</h3>
                         <p>Uses Google's DialogFlow for response generation.</p>
                         <p>Created for a course project (CS 886 - Advanced Topics in Artificial Intelligence), to study the impact of user interface design on the human-chatbot interaction.</p>
@@ -131,7 +224,26 @@
                         </div>
                     </div>
                 </section>
-                <section id="art">
+        <section id="press">
+        <h2>Press</h2>
+<a href="https://uwaterloo.ca/math/news/how-alum-saralin-zassman-uses-computer-science-make-art" target="_blank" class="link-preview">
+  <h3>Alum Q&A: How Saralin Zassman brings computer science into the artist’s studio</h3>
+  <p>
+    September 13, 2024<br>
+    uwaterloo.ca – Cheriton School of Computer Science
+  </p>
+</a>
+
+<a href="https://uwaterloo.ca/news/media/doom-scrolling-mindfulness" target="_blank" class="link-preview">
+  <h3>From doom-scrolling to mindfulness – New app unites principles from art and technology to encourage mindfulness on-the-go</h3>
+  <p>
+    August 12, 2024<br>
+    uwaterloo.ca - Waterloo News
+  </p>
+</a>
+
+        </section>
+                <section id="art" style="display: none;">
                     <h2>Art</h2>
                     <div class="image-collage">
                         <div class="collage-item">

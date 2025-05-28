@@ -71,7 +71,7 @@ h2{
     display: flex;
     justify-content: space-between; /* Aligns children to the left and right */
     /*align-items: center; !* Aligns children vertically in the center *!*/
-    width: 90%; /* Ensures the container spans the full width of its parent */
+    width: 100%; /* Ensures the container spans the full width of its parent */
     /*padding: 0 20px; !* Optional: adds some padding on both sides *!*/
 }
 
@@ -318,4 +318,40 @@ section:last-child {
     letter-spacing: 2px;
     font-size: 13px;
     font-weight: bold;
+}
+
+.link-preview {
+  display: block;             /* Make <a> behave like a block */
+  border: 2px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  /* background-color: #f9f9f9; */
+  color: #333;               /* Text color */
+  text-decoration: none;     /* Remove underline */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.link-preview:hover {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-decoration: none;    /* Keep underline off on hover */
+}
+
+.link-preview h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #922356;           /* Link color */
+}
+
+.link-preview p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
