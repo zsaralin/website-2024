@@ -1,37 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.ico" />
     <title>Saralin Zassman</title>
-    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="loading-page" class="loading-page" style="display: flex">
-    <div class="centered-content">
-        <h1 class="animated-text">
-            <span>welcome!</span>
-        </h1>
-        <h2 class="animated-walk" id="wavy" style="letter-spacing: 3px">draw something!</h2>
-        <div id="progressText" class="hidden">Let's Go!</div>
-        <div class="canvas-wrapper">
-            <canvas id="canvas" width="250" height="300"></canvas>
-            <img src="media/bow0.png" alt="Bow" class="bow0">
-            <img src="media/bow1.png" alt="Bow" class="bow1">
+<div id="main-page">
+    <div class="header-row"> <!-- New wrapper div -->
+        <div id="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#press">press</a></li>
+                    <li><a  href="javascript:void(0)" onclick="window.open('Resume.pdf', '_blank')";>resume</a></li>
+                </ul>
+            </nav>
         </div>
-        <button id="letsgo" class="centered-content button">
-            <span>let's go!</span>
-        </button>
-        <footer>
-            <p style="letter-spacing: 2px">made by saralin ✮⋆˙</p>
-        </footer>
+        <div class="contact-bar">
+            <span>let's connect!</span>
+            <div style="padding-top: 5px">
+                <a href="mailto:zsaralin@gmail.com">zsaralin@gmail.com</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/zsaralin/">
+                    <img src="media/linkedin.svg" alt="LinkedIn" style="width: 15px; height: 15px;">
+                </a>
+                <a href="https://github.com/zsaralin">
+                    <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                </a>
+            </div>
+        </div>
     </div>
+    <header>
+        <div class="top-row">
+            <img src="media/me.jpeg" alt="Saralin Zassman" class="profile-photo">
+            <h1>Saralin Zassman</h1>
+        </div>
+    </header>
+    <section id="about-me" style = "padding-top: 20px">
+        <h2>Hi, I'm Saralin! *:ﾟ✧</h2>
+        <p>
+            I'm a software developer with a passion for all things computer science and creativity! Most recently, I worked as 
+            a creative technologist for internationally renowned artist 
+            <a href="https://www.lozano-hemmer.com/" target="_blank" rel="noopener noreferrer" class="artist-link">Rafael Lozano-Hemmer</a>, 
+            where I led the development of several full-stack applications for interactive artworks. <br><br>
+            I'm currently seeking new opportunities, particularly in roles such as full-stack developer, creative technologist, or research engineer.
+        </p>
+    </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="project">
+                        <h3>Binocular Tension (2025)</h3>
+                        <p>A full-stack Python application that displays an image of eyes gazing at various angles, determined by the tracked viewer’s position relative to the display. 
+                            A RealSense camera is mounted approximately 3 meters above the screen, capturing depth data. A point cloud is generated from this data in real time and rotated to compensate for the camera’s elevated and angled position. 
+                            This transformation ensures the system identifies the person physically closest to the display, and selects the appropriate image accordingly.</p>
+                            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px">
+                            <video width="480" controls poster="media/binocular-me.jpg">
+                                <source src="media/binocular-me-optimized.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <video width="480" controls poster="media/binocular.jpg">
+                                <source src="media/binocular.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                            <small style="margin-top: 5px; color: #666; display: block;">Video © Rafael Lozano-Hemmer</small>
+                            <p>Developed for media artist Rafael-Lozano Hemmer. </p>
+
+                             <div class="button-container">
+                            <button onclick="window.open('https://www.lozano-hemmer.com/binocular_tension.php', '_blank');">Artwork</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/binocularTension')">
+                            <div class="languages">
+                                <span>Python 100%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Global Level of Confidence (2025)</h3>
+                        <p>A full-stack web app that performs real-time face detection and landmark drawing using MediaPipe, and a Node.js backend that generates facial descriptors 
+                            to find the closest matches from an archive of nearly 10,000 disappeared individuals during the Argentine dictatorship. The backend also uses a PostgreSQL database to store and update similarity scores over time, improving the accuracy of future searches. 
+                            Visitors can explore their top matches and learn more about each person, helping raise awareness of this important historical period.</p>
+                        <p>Developed for media artist Rafael-Lozano Hemmer.</p>
+
+                            <div class="button-container">
+                            <button onclick="window.open('https://levelofconfidence.net/', '_blank');">Website</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/gloc-parent2')">
+                            <div class="languages">
+                                <span>HTML 87.3%, JavaScript 12.3%, Other: 0.4%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Recognition (2024)</h3>
+                        <p>A revamp of Recognition (2018) using modern, state-of-the-art technologies.
+                            Originally developed in openFrameworks, I ported the piece to a new stack with a Python frontend and a Node.js backend.
+                            While the concept appears simple, the piece posed significant technical challenges. It displays hundreds of videos simultaneously, performs facial comparisons, and continuously records and saves new footage to a growing database, all without introducing lag to the live camera feed or video grid, and running entirely on a single M2 Pro.
+                        </p>
+                        <video width="240" controls poster="media/recognition.png">
+                                <source src="media/recognition-optimized.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <p>Developed for media artist Rafael-Lozano Hemmer. 
+                        <div class="button-container">
+                            <button onclick="window.open('https://www.lozano-hemmer.com/recognition.php', '_blank');">Artwork</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/recognition-parent')">
+                            <div class="languages">
+                                <span>Python 70.6%, JavaScript 28.6%, Shell: 0.8%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Transparency Display (2024)</h3>
+                        <p>An Electron app that detects body landmarks from a webcam and uses a custom segmentation pipeline to draw body figures. This approach allows finer control over visual parameters—such as limb thickness and length—rather than relying on off-the-shelf segmentation tools.
+                            The segmentations from each camera feed are composited, and pixel values are extracted and sent via DMX to drive the physical electronics.</p>
+                        <div style= "margin-top: 10px">
+                            <video width="480" controls poster="media/pdlc.jpg">
+                                <source src="media/pdlc-optimized.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <small style="margin-top: 5px; color: #666; display: block;">Video © Rafael Lozano-Hemmer</small>
+                        </div>
+                        <p>Developed for media artist Rafael-Lozano Hemmer. 
+
+                            <div class="button-container">
+                            <button onclick="window.open('https://www.lozano-hemmer.com/transparency_display.php', '_blank');">Artwork</button>
+                        </div>
+                            <div class="github-container" onclick="window.open('https://github.com/zsaralin/PDLC')">
+                            <div class="languages">
+                                <span>JavaScript 93.1%, CSS 4.4%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Mindful Scroll (2023)</h3>
+                        <img src="media/mindfulscroll.jpg" alt="Mindful Scroll" style="width: auto; max-width: 100%; height: auto;">
+
+                        <p>A mobile application for mindfulness that encourages a slow and deliberate approach to colouring.</p>
+                        <p>Master's thesis, accepted at ACM CHI 2024. </p>
+                        <p>Note: CHI (ACM Conference on Human Factors in Computing Systems), is regarded as the top conference in Human Computer Interaction (HCI), ranking #1 on Google Scholar, with an average
+                            acceptance rate of 23%. Conference proceedings are the preferred avenue for publication in the field of HCI. </p>
+                        <div class="button-container">
+                            <button onclick="window.open('mindful-scroll.pdf', '_blank');">Conference Paper</button>
+                            <button onclick="window.open('https://uwspace.uwaterloo.ca/handle/10012/19935?show=full', '_blank');">Thesis</button>
+                            <button onclick="window.open('https://https://mindfulscroll.ca/', '_blank');">Mobile App</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/mindful-scroll')">
+                            <div class="languages">
+                                <span>JavaScript 97.9%, CSS 1.4%, HTML: 0.6%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                        </div>
+                    <div class="project" style = "display: none">
+                        <h3>Speech to Text (2023)</h3>
+                        <p>Full-stack react app that converts speech to text using the Web Speech API, and then uses the text to
+                            generate a rhyme, poem, haiku and song using the OpenAI API.</p>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/speech-to-text')">
+                            <div class="languages">
+                                <span>JavaScript 83.6%, CSS 10.9%, HTML: 5.5%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+                        </div>
+                    </div>
+                    <div class="project"  style = "display: none">
+                        <h3>Simple, rule-based chatbot (2021)</h3>
+                        <p>Uses Google's DialogFlow for response generation.</p>
+                        <p>Created for a course project (CS 886 - Advanced Topics in Artificial Intelligence), to study the impact of user interface design on the human-chatbot interaction.</p>
+                        <div class="button-container">
+                            <button onclick="window.open('886.pdf', '_blank');">Course Paper</button>
+                        </div>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/dialogflow-chatbot')">
+                            <div class="languages">
+                                <span>JavaScript 61.1%, CSS 26.1%, HTML 12.7%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>DOM Data (2020)</h3>
+                        <p>Uses the Document Object Model of 100 webpages to generate structural priors to improve the vision-based segmentation of web pages. </p>
+                        <p>Completed during my research internship with Dr. Michael Cormier at Mount Allison University.</p>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/DOM-tree-data')">
+                            <div class="languages">
+                                <span>Python 100%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Haiku Generator (2020)</h3>
+                        <img src="media/haiku.gif" alt="Mindful Scroll" style="width: auto; max-width: 400px; height: auto;">
+
+                        <p>Uses Markov chains to generate a large number of sentences from a collection of pre-existing poems.
+                            The resulting text undergoes rigorous testing to identify
+                            the optimal sequence of words that will be used in the final haiku.  </p>
+                        <p>Completed for a course project on computational creativity at the University of Kent.</p>
+                        <div class="github-container" onclick="window.open('https://github.com/zsaralin/haiku-generator')">
+                            <div class="languages">
+                                <span>Java 100%</span>
+                            </div>
+                            <img src="media/github-mark.png" alt="GitHub" style="width: 15px; height: 15px;">
+                            <span style="color: black">Repo</span>
+
+                        </div>
+                    </div>
+                </section>
+        <section id="press">
+        <h2>Press</h2>
+<a href="https://uwaterloo.ca/math/news/how-alum-saralin-zassman-uses-computer-science-make-art" target="_blank" class="link-preview">
+  <h3>Alum Q&A: How Saralin Zassman brings computer science into the artist’s studio</h3>
+  <p>
+    September 13, 2024<br>
+    uwaterloo.ca – Cheriton School of Computer Science
+  </p>
+</a>
+
+<a href="https://uwaterloo.ca/news/media/doom-scrolling-mindfulness" target="_blank" class="link-preview">
+  <h3>From doom-scrolling to mindfulness – New app unites principles from art and technology to encourage mindfulness on-the-go</h3>
+  <p>
+    August 12, 2024<br>
+    uwaterloo.ca - Waterloo News
+  </p>
+</a>
+
+        </section>
+                <section id="art" style="display: none;">
+                    <h2>Art</h2>
+                    <div class="image-collage">
+                        <div class="collage-item">
+                            <img src="collage/blue.jpg"
+                                 loading="lazy"
+                                 style="width: 210%; transform: translate(-45%, -50%);"
+                                 alt="Blue"
+                                 onmouseover="this.style.transform='translate(-45%, -50%) scale(1.1)';"
+                                 onmouseout="this.style.transform='translate(-45%, -50%)';"
+                                 onclick="openModal('collage/blue.jpg', 'Blue')">
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/duck1.jpg"
+                                 style="width: 150%"
+                                 alt="Duck"
+                                 onclick="openModal('collage/duck1.jpg', 'Duck')">
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/unfinished.jpg"
+                                 style="width: 100%"
+                                 alt="Unfinished Art"
+                                 onclick="openModal('collage/unfinished.jpg', 'Duck')">
+                            >
+
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/koala.jpg"
+                                 style="width: 130%"
+                                 alt="Koala"
+                                 onclick="openModal('collage/koala.jpg', 'Duck')">
+                            >
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/seashell.jpg"
+                                 style="width: 180%"
+                                 alt="Seashell"
+                                 onclick="openModal('collage/seashell.jpg', 'Duck')">
+                            >
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/self.jpg"
+                                 style="width: 120%"
+                                 alt="Self Portrait"
+                                 onclick="openModal('collage/self.jpg', 'Duck')">
+                            >
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/stuffedanimal.jpg"
+                                 style="width: 190%"
+                                 alt="Stuffed Animal"
+                                 onclick="openModal('collage/stuffedanimal.jpg', 'Duck')">
+                            >
+                        </div>
+                        <div class="collage-item">
+                            <img src="collage/turkey.jpg"
+                                 style="width: 170%"
+                                 alt="Turkey"
+                                 onclick="openModal('collage/turkey.jpg', 'Duck')">
+                            >
+                        </div>
+                    </div>
+                    <div id="myModal" class="modal" onclick="closeModal(event)">
+                        <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
+                    </div>
+                </section>
+                <footer>
+
+                    <p style="letter-spacing: 2px">made by saralin ✮⋆˙</p>
+                </footer>
+    <script src="js/index.js"></script>
+
 </div>
-    <script src="js/loading.js"></script>
-</div>
-</body>
-</html>
+            </body>
+            </html>
