@@ -43,8 +43,8 @@
     <section id="about-me" style = "padding-top: 20px">
         <h2>Hi, I'm Saralin! *:ﾟ✧</h2>
         <p>
-            I'm a software developer with a passion for all things computer science and creativity! Most recently, I worked
-            a creative technologist for internationally renowned artist
+            I'm a software developer with a passion for all things computer science and creativity! Most recently, I worked as 
+            a creative technologist for internationally renowned artist 
             <a href="https://www.lozano-hemmer.com/" target="_blank" rel="noopener noreferrer" class="artist-link">Rafael Lozano-Hemmer</a>, 
             where I led the development of several full-stack applications for interactive artworks. <br><br>
             I'm currently seeking new opportunities, particularly in roles such as full-stack developer, creative technologist, or research engineer.
@@ -54,9 +54,9 @@
                     <h2>Projects</h2>
                     <div class="project">
                         <h3>Binocular Tension (2025)</h3>
-                        <p>A full-stack Python application that selects and displays one image at a time from a set 
-                            of eyes looking at different angles, based on the tracked person’s position relative to the display. The backend uses a RealSense camera mounted 3 meters above the display, angled downward, along with the Pyrealsense library to render a 3D scene that accounts for this setup and accurately tracks the closest viewer,
-                             creating the illusion that the eyes are following them.</p>
+                        <p>A full-stack Python application that displays an image of eyes gazing at various angles, determined by the tracked viewer’s position relative to the display. 
+                            A RealSense camera is mounted approximately 3 meters above the screen, capturing depth data. A point cloud is generated from this data in real time and rotated to compensate for the camera’s elevated and angled position. 
+                            This transformation ensures the system identifies the person physically closest to the display, and selects the appropriate image accordingly.</p>
                             <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px">
                             <video width="480" controls poster="media/binocular-me.jpg">
                                 <source src="media/binocular-me-optimized.mp4" type="video/mp4">
@@ -83,7 +83,8 @@
                     </div>
                     <div class="project">
                         <h3>Global Level of Confidence (2025)</h3>
-                        <p>A full-stack web app with a Vite React frontend that performs real-time face detection and landmark drawing using MediaPipe, and a Node.js backend that generates facial descriptors to find the closest matches from an archive of nearly 10,000 disappeared individuals during the Argentine dictatorship. The backend also uses a PostgreSQL database to store and update similarity scores over time, improving the accuracy of future searches. 
+                        <p>A full-stack web app that performs real-time face detection and landmark drawing using MediaPipe, and a Node.js backend that generates facial descriptors 
+                            to find the closest matches from an archive of nearly 10,000 disappeared individuals during the Argentine dictatorship. The backend also uses a PostgreSQL database to store and update similarity scores over time, improving the accuracy of future searches. 
                             Visitors can explore their top matches and learn more about each person, helping raise awareness of this important historical period.</p>
                         <p>Developed for media artist Rafael-Lozano Hemmer.</p>
 
@@ -100,7 +101,7 @@
                     </div>
                     <div class="project">
                         <h3>Recognition (2024)</h3>
-                        <p>A revamp of an existing artwork (2018) using modern, state-of-the-art technologies.
+                        <p>A revamp of Recognition (2018) using modern, state-of-the-art technologies.
                             Originally developed in openFrameworks, I ported the piece to a new stack with a Python frontend and a Node.js backend.
                             While the concept appears simple, the piece posed significant technical challenges. It displays hundreds of videos simultaneously, performs facial comparisons, and continuously records and saves new footage to a growing database, all without introducing lag to the live camera feed or video grid, and running entirely on a single M2 Pro.
                         </p>
@@ -122,7 +123,7 @@
                     </div>
                     <div class="project">
                         <h3>Transparency Display (2024)</h3>
-                        <p>Electron app that uses MoveNet to detect body landmarks and developed a custom segmentation pipeline to allow greater control over visual parameters such as limb thickness and length, compared to off-the-shelf solutions. 
+                        <p>An Electron app that detects body landmarks from a webcam and uses a custom segmentation pipeline to draw body figures. This approach allows finer control over visual parameters—such as limb thickness and length—rather than relying on off-the-shelf segmentation tools.
                             The segmentations from each camera feed are composited, and pixel values are extracted and sent via DMX to drive the physical electronics.</p>
                         <div style= "margin-top: 10px">
                             <video width="480" controls poster="media/pdlc.jpg">
