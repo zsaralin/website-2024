@@ -54,9 +54,8 @@
                     <h2>Projects</h2>
                     <div class="project">
                         <h3>Binocular Tension (2025)</h3>
-                        <p>A full-stack Python application that displays an image of eyes gazing at various angles, determined by the tracked viewer’s position relative to the display. 
-                            A RealSense camera is mounted approximately 3 meters above the screen, capturing depth data. A point cloud is generated from this data in real time and rotated to compensate for the camera’s elevated and angled position. 
-                            This transformation ensures the system identifies the person physically closest to the display, and selects the appropriate image accordingly.</p>
+                        <p>A full-stack Python app that displays eyes looking in different directions based on the viewer’s position. It generates a point cloud in real time using data from a depth camera, then rotates it to correct for the camera’s height and angle. 
+                            This correction allows the system to identify the person closest to the display and show the appropriate gaze.</p>
                             <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px">
                             <video width="480" controls poster="media/binocular-me.jpg">
                                 <source src="media/binocular-me-optimized.mp4" type="video/mp4">
